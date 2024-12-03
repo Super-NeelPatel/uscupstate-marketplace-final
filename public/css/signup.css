@@ -1,0 +1,91 @@
+/* navbar.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* /* signup.css */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: 250px;
+}
+
+.links__container {
+  margin-bottom: 20px;
+}
+
+.links__container a {
+  margin-right: 10px;
+  color: #0077cc;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 8px 15px;
+  border: 1px solid #0077cc;
+  border-radius: 4px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.links__container a:hover {
+  color: #fff;
+  background-color: #0077cc;
+}
+
+.form__container {
+  background-color: #fff;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.form__main-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__main-div input[type="text"],
+.form__main-div input[type="email"],
+.form__main-div input[type="password"] {
+  width: 400px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form__buttons {
+  margin-top: 15px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #0077cc;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #005fa3;
+}
+
+p {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}

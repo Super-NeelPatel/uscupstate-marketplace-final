@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Uploaded Images</title>
+  </head>
+  <body>
+    <h1>Uploaded Images</h1>
+
+    <div>
+      <% images.forEach(image => { %>
+      <div>
+        <img
+          src="<%= image.image_url %>"
+          alt="Image"
+          width="300"
+          height="300"
+        />
+      </div>
+      <% }); %>
+    </div>
+
+    <a href="/">Upload Another Image</a>
+  </body>
+</html>

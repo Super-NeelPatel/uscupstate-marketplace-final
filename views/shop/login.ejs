@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/general-nav.css" />
+    <link rel="stylesheet" href="/css/signup.css" />
+    <title><%= pageTitle%></title>
+  </head>
+  <body>
+    <%- include("../includes/general-nav.ejs") %>
+    <div class="main">
+      <div class="links__container">
+        <a href="/signup">Sign Up</a>
+        <a href="/login">Log In</a>
+      </div>
+      <div class="form__container">
+        <form action="/login" method="POST">
+          <div class="form__main-div">
+            <div>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+              /><br />
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                required
+              />
+            </div>
+            <div class="form__buttons">
+              <button type="submit" class="btn btn-login">Login</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

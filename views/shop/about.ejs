@@ -1,0 +1,46 @@
+    <%- include("../includes/head.ejs") %>
+    <title><%= pageTitle%></title>
+    <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="/css/general-nav.css" />
+  </head>
+  <body>
+    <%- include("../includes/general-nav.ejs") %>
+    <section class="section-1">
+      <!-- <div class="section-1__bg-img">
+          <img src="https://www.channelengine.com/hubfs/Blogs/2023-07/Marketplace%20strategy.jpg" alt="Marketplace strategy"/>
+      </div> -->
+      <div class="section-1__content">
+          <h1 class="main-heading">Who We Are</h1>
+          <p class="section-1__text">
+              Our mission is to create a seamless, student-centric marketplace that connects the USC Upstate community through buying, selling, and swapping goods and services. We strive to make campus life easier by offering an affordable, secure platform where students can find everything from textbooks to tutoring, while promoting sustainability and supporting peer-to-peer exchanges. By fostering a reliable and convenient marketplace, we aim to enhance the student experience, empower local entrepreneurship, and build stronger connections within the campus community.
+          </p>
+      </div>
+  </section>
+  <section class="team-section">
+    <h2>Meet Our Team</h2>
+    <div class="team-cards">
+      <% const developers = [
+      { name: "VICTORIA", image: "/dev-imgs/victoria.webp", languages: ["C++", "C#", "Python", "SQL", "Java", "Visual Basic", "Kotlin", "Mavean", "Wolfram Alpha for Mathematics"], description: "Full-stack Developer." },
+      { name: "NEEL", image: "/dev-imgs/neel.jpeg", languages: ["HTML", "CSS", "JavaScript", "Python", "Java", "Android Studio","React.js", "Node.js", "Express.js"], description: "MERN-Stack Developer." },
+      { name: "NANDINI", image: "/dev-imgs/nandini.webp", languages: ["HTML", "CSS", "JavaScript", "Java", "Python", "C++", "C#", "Node.js", "React.js"], description: "Full-stack Developer." },
+      { name: "MERT", image: "/dev-imgs/mert.webp", languages: ["Java", "HTML","CSS","JavaScript", "Python"], description: "Front-end Developer" },
+      { name: "JESSICA", image: "/dev-imgs/jessica.webp", languages: ["Java", "Python", "SQL"], description: "Database expert who loves data-driven solutions." },
+        { name: "RYON", image: "/dev-imgs/ryon.webp", languages: ["Ruby", "Rails", "JavaScript"], description: "Full-stack dev with a love for Ruby and clean code." }
+      ]; %>
+      <% developers.forEach(dev => { %>
+        <div class="card">
+          <div class="card__image">
+            <img src="<%= dev.image %>" alt="<%= dev.name %>" />
+          </div>
+          <div class="card__overlay">
+            <h3 class="card__name"><%= dev.name %></h3>
+            <p class="card__description"><%= dev.description %></p>
+            <p class="card__skills">Languages: <%= dev.languages.join(", ") %></p>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </section>
+      
+    </body>
+</html>

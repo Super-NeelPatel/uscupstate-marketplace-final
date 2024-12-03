@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Section 1 styling */
+.section-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #f0f0f0; /* Light background for better contrast */
+  padding: 4rem 2rem;
+}
+
+.section-1__bg-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensure image stays behind content */
+  opacity: 0.7; /* Add some opacity to create a subtle overlay effect */
+}
+
+.section-1__content {
+  max-width: 800px; /* Limit content width for readability */
+  text-align: center;
+  color: #333;
+}
+
+.main-heading {
+  font-size: 2.5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.section-1__text {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .section-1__content {
+    padding: 0 1rem;
+  }
+
+  .main-heading {
+    font-size: 2rem;
+  }
+
+  .section-1__text {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .card {
+    width: 45%;
+  }
+}
+/* General styles */
+.team-section {
+  text-align: center;
+  padding: 2rem;
+}
+
+.team-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.team-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* Card styles */
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Card image */
+.card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay for name and skills */
+.card__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .card__overlay {
+  opacity: 0.9;
+}
+
+.card__name {
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+}
+
+.card__description {
+  /* margin-top: 10px; */
+  font-size: 1.3rem;
+  padding: 10px 15px;
+}
+
+.card__skills {
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 1rem;
+}

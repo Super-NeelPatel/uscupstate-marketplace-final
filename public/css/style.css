@@ -1,0 +1,116 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #002029;
+}
+
+.product-header {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/*Product Index Page*/
+.product-listing {
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 
+        0 4px 8px rgba(210, 211, 198, 0.555),           /* Main shadow */
+        0 0 25px 8px rgba(255, 119, 0, 0.411); 
+    border-radius: 8px;
+}
+
+/* Product Details Page */
+.product-details {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    max-width: 800px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 
+        0 4px 8px rgba(210, 211, 198, 0.555),           /* Main shadow */
+        0 0 25px 10px rgba(255, 119, 0, 0.411);   /* Orange glow shadow */
+    border-radius: 8px;
+    gap: 20px; /* Space between image and info */
+    align-items: flex-start;
+}
+
+.product-details__image img {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-details__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    flex-grow: 1; /* Allows info section to take up remaining space */
+}
+
+.product-details__info h1 {
+    margin: 0;
+    color: #333;
+}
+
+.product-condition {
+    font-style: italic;
+    font-weight: bold;
+    margin: 10px 0;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.product-description {
+    margin: 10px 0;
+}
+
+.product-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #aaecff;
+    color: #002029;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.product-details__info h1 {
+    margin: 0;
+    color: #333;
+    font-size: 24px;
+}
+
+.product-price {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(255, 119, 0);
+    margin-right: 15px;
+}

@@ -1,0 +1,120 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/signup.css" />
+    <title><%= pageTitle%></title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar__div">
+        <div class="navbar__div-left">
+          <ul class="navbar__ul">
+            <li>
+              <a href="home">Home</a>
+            </li>
+            <li>
+              <a href="/shop">Shop</a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar__div-right">
+          <ul class="navbar__ul">
+            <li>
+              <a href="/signup">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="main">
+      <div class="links__container">
+        <a href="/signup">Sign Up</a>
+        <a href="/login">Log In</a>
+      </div>
+      <div class="form__container">
+        <form action="/signup" method="POST">
+          <div class="form__main-div">
+            <div>
+              <input
+                type="text"
+                name="username"
+                placeholder="Username"
+                required
+              /><br />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+              /><br />
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                required
+              />
+            </div>
+            <div class="form__buttons">
+              <button type="submit" class="btn btn-signin">Sign Up</button>
+            </div>
+            <p><%=userMsg%></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/general-nav.css" />
+    <link rel="stylesheet" href="/css/signup.css" />
+    <title><%= pageTitle %></title>
+  </head>
+  <body>
+    <%- include("../includes/general-nav.ejs") %>
+
+    <div class="main">
+      <div class="links__container">
+        <a href="/signup">Sign Up</a>
+        <a href="/login">Log In</a>
+      </div>
+      <div class="form__container">
+        <form action="/signup" method="POST">
+          <div class="form__main-div">
+            <div>
+              <input
+                type="text"
+                name="username"
+                placeholder="Username"
+                required
+              /><br />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+              /><br />
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                required
+              />
+            </div>
+            <div class="form__buttons">
+              <button type="submit" class="btn btn-signin">Sign Up</button>
+            </div>
+            <p><%= userMsg %></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

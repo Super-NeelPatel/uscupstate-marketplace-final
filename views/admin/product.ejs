@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../includes/head.ejs") %>
+    <link rel="stylesheet" href="/css/product.css" />
+    <title><%= product.title %></title>
+  </head>
+  <body>
+    <%- include("../includes/navigation.ejs") %>
+
+    <section class="product-section">
+      <div class="product-container">
+        <div class="product-image">
+          <img src="<%= product.image %>" alt="<%= product.title %>" />
+        </div>
+        <div class="product-details">
+          <h1 class="product-title"><%= product.title %></h1>
+          <p class="product-description"><%= product.description %></p>
+          <div class="product-price">
+            <img src="/icons/tag.png" alt="Price Tag" class="price-icon" />
+            <span>$ <%= product.price %></span>
+          </div>
+
+          <form action="/cart" method="POST" class="add-to-cart-form">
+            <input type="hidden" name="productId" value="<%= product.id %>" />
+            <button type="submit" class="btn btn-buy-now">Buy Now</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

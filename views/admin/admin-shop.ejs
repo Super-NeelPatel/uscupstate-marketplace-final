@@ -1,0 +1,30 @@
+
+<%- include("../includes/head.ejs") %>
+<link rel="stylesheet" href="/css/admin-shop.css">
+<title><%= pageTitle %></title>
+</head>
+<body>
+  <%- include("../includes/navigation.ejs") %>
+  <div class="main">
+    <% if (allProducts.length > 0) { %>
+      <div class="product-grid">
+        <% for (let product of allProducts) { %>
+          <div class="product">
+            <img class="product__img" src="<%= product.image %>" alt="<%= product.title %>" />
+            <div class="product__details-container">
+              <p class="product__title"><%= product.title %></p>
+              <p class="product__price">$<%= product.price %></p>
+            </div>
+            <div class="actions__container">
+              <a href="mailto:recipient@example.com?subject=Interested in swapping&body=Hi, I'm interested in swapping for <%= product.title %>!" class="btn-swap">Swap</a>
+              <a href="admin-shop/product/<%= product.id %>" class="btn-more">More</a>
+            </div>
+          </div>
+        <% } %>
+      </div>
+    <% } else { %>
+      <h1 class="no-products">No Products Found</h1>
+    <% } %>
+  </div>
+</body>
+</html>

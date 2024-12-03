@@ -1,0 +1,258 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Limelight&display=swap"
+      rel="stylesheet"
+    />
+    <title><%= pageTitle%></title>
+  </head>
+  <body>
+    <%- include("./navigation-before-loggedin.ejs") %>
+    <section class="section-1">
+      <div class="section-1__main-div">
+        <div class="section-1__content">
+          <h1 class="section-1__hero-msg">
+            Buy, sell, and swap at Upstate Hub.
+          </h1>
+          <p class="section-1__brief-msg">
+            It’s fast, easy, and student-powered.
+          </p>
+          <div class="buttons">
+            <a class="btn btn__signin" href="/signup">GET STARTED</a>
+          </div>
+        </div>
+        <div class="box section-1__img-container">
+          <img src="/images/product-1.jpeg" />
+        </div>
+      </div>
+    </section>
+    <div class="four-products__container">
+      <h2>Explore More</h2>
+      <div class="all-products">
+        <div class="chair product-1"><img src="/images/chair.jpeg" /></div>
+        <div class="bed product-2"><img src="/images/bed.jpeg" /></div>
+        <div class="lamp product-3"><img src="/images/lamp.jpeg" /></div>
+        <div class="purse product-4"><img src="/images/purse-2.jpeg" /></div>
+        <div class="shelf product-5"><img src="/images/shelf.jpeg" /></div>
+        <div class="pen-container product-6">
+          <img src="/images/pen-container.jpeg" />
+        </div>
+        <div class="photo-frame product-7">
+          <img src="/images/photo-frame.jpeg" />
+        </div>
+        <div class="vaccum product-8"><img src="/images/vaccum.jpeg" /></div>
+        <div class="coffee-maker product-9">
+          <img src="/images/coffee-maker.jpeg" />
+        </div>
+      </div>
+      <div class="container__discover-more">
+        <a href="#" class="link__discover-more">Explore Now</a>
+      </div>
+    </div>
+    <section class="section-2">
+      <div class="section-2__main-div">
+        <h1 class="section-2__header">Our Services</h1>
+        <div class="services__container">
+          <div class="services">
+            <div class="service service-1">
+              <div>
+                <img class="service__img" src="/icons/buy.png" />
+              </div>
+              <div class="service__description">
+                <h2 class="service__heading">Buy</h2>
+                <p class="service__details">
+                  Our service for USC Upstate students offers affordable
+                  products and services, from textbooks to tutoring. Shop
+                  securely from trusted sellers and enjoy convenient on-campus
+                  transactions!
+                </p>
+              </div>
+            </div>
+            <div class="service service-2">
+              <div>
+                <img class="service__img" src="/icons/sell.png" />
+              </div>
+              <div class="service__description">
+                <h2 class="service__heading">Sell</h2>
+                <p class="service__details">
+                  Our marketplace lets you sell to fellow USC Upstate students,
+                  set your own prices, and enjoy hassle-free on-campus
+                  exchanges—no shipping needed.
+                </p>
+              </div>
+            </div>
+            <div class="service service-3">
+              <div>
+                <img class="service__img" src="/icons/swap.png" />
+              </div>
+              <div class="service__description">
+                <h2 class="service__heading">Swap</h2>
+                <p class="service__details">
+                  Our swapping service lets USC Upstate students trade items
+                  like textbooks and dorm essentials without spending money.
+                  Swap locally in a safe, trusted environment.
+                </p>
+              </div>
+            </div>
+            <div class="service service-4">
+              <div>
+                <img class="service__img" src="/icons/delivery2.png" />
+              </div>
+              <div class="service__description">
+                <h2 class="service__heading">0 Day Delivery</h2>
+                <p class="service__details">
+                  USC Upstate Marketplace offers First Day Delivery for
+                  essentials like textbooks and dorm supplies. Get fast,
+                  reliable same-day delivery from on-campus sellers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/general-nav.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <title><%= pageTitle %></title>
+  </head>
+  <body>
+    <%- include("../includes/general-nav.ejs") %>
+
+    <!-- Hero Section -->
+    <section class="section-1">
+      <div class="section-1__main-div">
+        <div class="section-1__content">
+          <h1 class="section-1__hero-msg">
+            Buy, sell, and swap at Upstate Hub.
+          </h1>
+          <p class="section-1__brief-msg">
+            It’s fast, easy, and student-powered.
+          </p>
+          <div class="buttons">
+            <a class="btn btn__signin" href="/signup">GET STARTED</a>
+          </div>
+        </div>
+        <div class="section-1__img-container">
+          <img src="/images/product-1.jpeg" alt="Product showcase" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Showcase Section -->
+    <div class="four-products__container">
+      <h2>Explore More</h2>
+      <div class="all-products">
+        <div class="product"><img src="/images/chair.jpeg" alt="Chair" /></div>
+        <div class="product"><img src="/images/bed.jpeg" alt="Bed" /></div>
+        <div class="product"><img src="/images/lamp.jpeg" alt="Lamp" /></div>
+        <div class="product">
+          <img src="/images/purse-2.jpeg" alt="Purse" />
+        </div>
+        <div class="product"><img src="/images/shelf.jpeg" alt="Shelf" /></div>
+        <div class="product">
+          <img src="/images/pen-container.jpeg" alt="Pen container" />
+        </div>
+        <div class="product">
+          <img src="/images/photo-frame.jpeg" alt="Photo frame" />
+        </div>
+        <div class="product">
+          <img src="/images/coffee-maker.jpeg" alt="Coffee maker" />
+        </div>
+      </div>
+      <div class="container__discover-more">
+        <a href="#" class="link__discover-more">Explore Now</a>
+      </div>
+    </div>
+
+    <!-- Services Section -->
+    <section class="section-2">
+      <div class="section-2__main-div">
+        <h1 class="section-2__header">Our Services</h1>
+        <div class="services__container">
+          <div class="service">
+            <img class="service__img" src="/icons/buy.png" alt="Buy icon" />
+            <div class="service__description">
+              <h2 class="service__heading">Buy</h2>
+              <p class="service__details">
+                Our service for USC Upstate students offers affordable products
+                and services, from textbooks to tutoring. Shop securely from
+                trusted sellers and enjoy convenient on-campus transactions!
+              </p>
+            </div>
+          </div>
+          <div class="service">
+            <img class="service__img" src="/icons/sell.png" alt="Sell icon" />
+            <div class="service__description">
+              <h2 class="service__heading">Sell</h2>
+              <p class="service__details">
+                Our marketplace lets you sell to fellow USC Upstate students,
+                set your own prices, and enjoy hassle-free on-campus
+                exchanges—no shipping needed.
+              </p>
+            </div>
+          </div>
+          <div class="service">
+            <img class="service__img" src="/icons/swap.png" alt="Swap icon" />
+            <div class="service__description">
+              <h2 class="service__heading">Swap</h2>
+              <p class="service__details">
+                Trade items like textbooks and dorm essentials without spending
+                money. Swap locally in a safe, trusted environment.
+              </p>
+            </div>
+          </div>
+          <div class="service">
+            <img
+              class="service__img"
+              src="/icons/delivery2.png"
+              alt="Delivery icon"
+            />
+            <div class="service__description">
+              <h2 class="service__heading">0 Day Delivery</h2>
+              <p class="service__details">
+                Enjoy fast, reliable same-day delivery for essentials like
+                textbooks and dorm supplies from on-campus sellers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

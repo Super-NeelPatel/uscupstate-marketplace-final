@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Item</title>
+    <link rel="stylesheet" href="/css/general-nav.css" />
+  </head>
+  <body>
+    <%- include("../includes/navigation.ejs") %>
+    <style>
+      .form-container {
+        width: 400px;
+        margin: 200px auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+      }
+      h2 {
+        margin-bottom: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 96%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+
+      .form-group img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+
+      .submit-btn {
+        width: 100%;
+        padding: 10px;
+        background-color: #0077cc;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .submit-btn:hover {
+        background-color: #005fa3;
+      }
+    </style>
+    <div class="form-container">
+      <h2>Add New Item</h2>
+      <form
+        id="addItemForm"
+        action="/admin/sell-your-product"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" id="title" name="title" required />
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea
+            id="description"
+            name="description"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input
+            type="number"
+            id="price"
+            name="price"
+            min="0"
+            step="0.01"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="image">Image</label>
+          <input
+            type="file"
+            id="image"
+            name="image"
+            accept="image/*"
+            onchange="previewImage(event)"
+          />
+          <img id="imagePreview" style="display: none" alt="Image Preview" />
+        </div>
+
+        <button type="submit" class="submit-btn">Add Item</button>
+      </form>
+    </div>
+
+    <script>
+      // Function to display the selected image preview
+      function previewImage(event) {
+        const imagePreview = document.getElementById("imagePreview");
+        const file = event.target.files[0];
+
+        if (file) {
+          const reader = new FileReader();
+
+          reader.onload = function (e) {
+            imagePreview.src = e.target.result;
+            imagePreview.style.display = "block";
+          };
+
+          reader.readAsDataURL(file);
+        } else {
+          imagePreview.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

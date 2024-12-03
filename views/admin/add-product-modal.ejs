@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/add-product-modal.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar__div">
+        <div class="navbar__div-left">
+          <ul class="navbar__ul">
+            <li>
+              <a href="/home">Home</a>
+            </li>
+            <li>
+              <a href="/shop">Shop</a>
+            </li>
+            <li>
+              <a href="/admin/cart">Cart</a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar__div-right">
+          <ul class="navbar__ul">
+            <li>
+              <a href="/admin/your-products">Your Products</a>
+            </li>
+            <li>
+              <a href="/signup">Log out</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="main">
+      <a class="backdrop" href="/admin/your-products/"></a>
+      <div class="add-product__container">
+        <div class="add-product__form">
+          <h2>Add Product to sell.</h2>
+
+          <input name="title" placeholder="title" />
+          <input name="imageUrl" type="text" placeholder="image url" />
+          <textarea
+            name="description"
+            placeholder="description about product"
+            cols="53"
+            rows="15"
+          ></textarea>
+          <select name="category" class="category__selection">
+            <option value="note">Note</option>
+            <option value="product">Product</option>
+          </select>
+
+          <button type="submit" class="add-product__btn">Add Product</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
